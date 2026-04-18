@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com\smartcampus\exception\RoomNotEmptyException.class
 com\smartcampus\DataStore.class
 com\smartcampus\model\Sensor.class
@@ -7,5 +8,13 @@ com\smartcampus\model\Room.class
 com\smartcampus\AppConfig.class
 com\smartcampus\resource\DiscoveryResource.class
 com\smartcampus\resource\RoomResource.class
+=======
+com\smartcampus\DataStore.class
+com\smartcampus\model\Sensor.class
+com\smartcampus\resources\JavaEE8Resource.class
+com\smartcampus\model\Room.class
+com\smartcampus\AppConfig.class
+com\smartcampus\resource\DiscoveryResource.class
+>>>>>>> 7960e81fbb34642a9274fd2208c0e3f93ed9f073
 com\smartcampus\JAXRSConfiguration.class
 com\smartcampus\model\SensorReading.class
