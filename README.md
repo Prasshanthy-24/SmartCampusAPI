@@ -72,3 +72,18 @@ curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors \
 
 ### Delete a sensor
 curl -X DELETE http://localhost:8080/SmartCampusAPI/api/v1/sensors/TEMP-002
+
+PART 4
+
+### Get all readings for a sensor
+curl -X GET http://localhost:8080/SmartCampusAPI/api/v1/sensors/TEMP-001/readings
+
+### Add a new reading
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors/TEMP-001/readings \
+  -H "Content-Type: application/json" \
+  -d '{"value":24.5}'
+
+### Add reading to MAINTENANCE sensor (returns 403)
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors/OCC-001/readings \
+  -H "Content-Type: application/json" \
+  -d '{"value":15.0}'

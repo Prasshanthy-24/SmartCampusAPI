@@ -2,8 +2,11 @@ C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\resource\RoomResource.java
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\resources\JavaEE8Resource.java
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\exception\RoomNotEmptyException.java
+C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\resource\SensorReadingResource.java
+C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\exception\SensorUnavailableExceptionMapper.java
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\exception\RoomNotEmptyExceptionMapper.java
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\exception\LinkedResourceNotFoundException.java
+C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\exception\SensorUnavailableException.java
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\JAXRSConfiguration.java
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\exception\LinkedResourceNotFoundExceptionMapper.java
 C:\Users\DELL\Documents\IIT 2025\CW\SmartCampusAPI\src\main\java\com\smartcampus\model\SensorReading.java

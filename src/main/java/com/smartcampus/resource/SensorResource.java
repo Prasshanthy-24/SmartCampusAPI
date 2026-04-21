@@ -130,4 +130,16 @@ public class SensorResource {
 
         return Response.noContent().build(); // 204 No Content
     }
+    
+  
+    // Part 4 Sub-resource locator
+    // GET/POST /api/v1/sensors/{sensorId}/readings
+    // It returns the resource object and JAX-RS
+    // figures out which method to call on it
+
+    @Path("/{sensorId}/readings")
+    public SensorReadingResource getReadingResource(
+            @PathParam("sensorId") String sensorId) {
+        return new SensorReadingResource(sensorId);
+    }
 }
