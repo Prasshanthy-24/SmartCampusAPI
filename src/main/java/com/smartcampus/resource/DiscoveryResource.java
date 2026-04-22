@@ -34,4 +34,13 @@ public class DiscoveryResource {
 
         return Response.ok(info).build();
     }
+
+    @GET
+    @Path("/test-error")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response testError() {
+        String s = null;
+        s.length();
+        return Response.ok().build();
+    }
 }

@@ -18,7 +18,6 @@ public class RoomResource {
 
     // GET /api/v1/rooms
     // Returns all rooms as a JSON array
-   
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllRooms() {
@@ -26,33 +25,30 @@ public class RoomResource {
         return Response.ok(roomList).build();
     }
 
-    // POST /api/v1/rooms
-    // Creates a new room
-   
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createRoom(Room room) {
 
-        // Check if a room with this ID already exists
         if (DataStore.rooms.containsKey(room.getId())) {
             return Response.status(Response.Status.CONFLICT)
                     .entity("{\"error\":\"Room with this ID already exists\"}")
                     .build();
         }
 
-        // Save the room into HashMap
         DataStore.rooms.put(room.getId(), room);
 
-        // Return 201 Created with the new room as the body
-        return Response.status(Response.Status.CREATED)
+        java.net.URI location = java.net.URI.create(
+                "/api/v1/rooms/" + room.getId()
+        );
+
+        return Response.created(location)
                 .entity(room)
                 .build();
     }
 
     // GET /api/v1/rooms/{roomId}
     // Returns a single room by its ID
-  
     @GET
     @Path("/{roomId}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -72,7 +68,6 @@ public class RoomResource {
 
     // DELETE /api/v1/rooms/{roomId}
     // Deletes a room - but ONLY if it has no sensors
-  
     @DELETE
     @Path("/{roomId}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -91,9 +86,9 @@ public class RoomResource {
         // This throws RoomNotEmptyException 
         if (!room.getSensorIds().isEmpty()) {
             throw new RoomNotEmptyException(
-                "Cannot delete room '" + roomId + 
-                "' — it still has " + room.getSensorIds().size() + 
-                " sensor(s) assigned to it."
+                    "Cannot delete room '" + roomId
+                    + "' — it still has " + room.getSensorIds().size()
+                    + " sensor(s) assigned to it."
             );
         }
 
